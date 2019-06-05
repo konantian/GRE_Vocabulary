@@ -7,9 +7,9 @@ def main():
 
 	path = './vocabulary.db'
 	connect(path)
-	initScript = open('init.sql','r').read()
-	cursor.executescript(initScript)
-	connection.commit()
+	#initScript = open('init.sql','r').read()
+	#cursor.executescript(initScript)
+	#connection.commit()
 	welcome()
 	connection.commit()
 
