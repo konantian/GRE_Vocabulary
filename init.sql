@@ -1,36 +1,137 @@
-DROP TABLE IF EXISTS yaoniming3000;
-DROP TABLE IF EXISTS other;
-
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
 CREATE TABLE yaoniming3000 (
-	id 				   INT,
-	word	   		   TEXT,
-	meaning	           TEXT,
-	date_when_inserted DATE,
-	PRIMARY KEY (id)
+	word text,
+	meaning text,
+	date_when_inserated date,
+	primary key (word)
 );
-
-CREATE TABLE other (
-	id 				   INT,
-	word	   		   TEXT,
-	meaning	           TEXT,
-	date_when_inserted DATE,
-	PRIMARY KEY (id)
-);
-
-INSERT INTO yaoniming3000 VALUES(1,'affect','v.假装,倾向,喜欢,影响',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'modest','adj.适中的,适量的,谦虚的',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'temper','v.缓和,调整 n.脾气',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'algae','n.藻类',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'ballon','v.激增 n.气球',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'compelling','adj.有吸引力的,令人信服的,强大的',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'dispute','v.争论,质疑 n.争论,纠纷',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'striking','adj.引人注目的,显著地',date('now','localtime'));
-
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'thrust','v.猛推,刺,插 n.插入,挤,主旨',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'accessible','adj.容易理解的,容易到达的,易获得的',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'adequate','adj.足够的,充分的,适当的,合格的',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'affinity','n.喜爱,亲和力,类同',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'appreciate','v.意识到,欣赏,感激,升值',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'ascetic','adj.清苦的,苦行的',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'assume','v.假设,承担,呈现',date('now','localtime'));
-INSERT INTO yaoniming3000 VALUES((select max(id)+1 from yaoniming3000),'block','v.阻止',date('now','localtime'));
+INSERT INTO yaoniming3000 VALUES('affect','v.假装,倾向,喜欢,影响','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('modest','adj.适中的,适量的,谦虚的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('temper','v.缓和,调整 n.脾气','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('algae','n.藻类','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('ballon','v.激增 n.气球','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('compelling','adj.有吸引力的,令人信服的,强大的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dispute','v.争论,质疑 n.争论,纠纷','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('striking','adj.引人注目的,显著地','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('thrust','v.猛推,刺,插 n.插入,挤,主旨','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('accessible','adj.容易理解的,容易到达的,易获得的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('acquaintance','n.了解,熟悉,认识的人,泛泛之交','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('adequate','adj.足够的,充分的,适当的,合格的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('affinity','n.喜爱,亲和力,类同','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('appreciate','v.意识到,欣赏,感激,升值','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('ascetic','adj.清苦的,苦行的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('assume','v.假设,承担,呈现','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('block','v.阻止','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('climatic','adj.气候的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('cluster','v.聚集 n.簇,团,群','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('compound','v.加剧,恶化,混合','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('compromise','v.妥协,让步 n.妥协','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('conviction','n.信念,确,定罪','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('crucial','adj.至关重要的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('delicate','adj.精美的,易碎的,敏锐的,微妙的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('discharge','v.释放,排出,履行,解雇','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('extravagant','adj.过分的,挥霍的,过于昂贵的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('foreground','n.突出的地位 v.强调,突出','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('foster','v.培育,抚养','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('giant','n.巨人 adj.巨大的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('gravity','n.严肃 庄重,地心引力','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('ignorance','n.无知,愚昧','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('involved','adj.参与的,涉及的,复杂难懂的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('narrative','n.记叙文,故事','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('norm','n.标准,规范','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('perrennial','adj.长期的,常年的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('reflect','v.反射,反映,思考','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('shrink','v.缩小,收缩,畏缩','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('singular','adj.非凡的,突出的,奇特的,异常的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('stringent','adj.严格的,严厉的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('substantial','adj.重大的,大量的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('subtle','adj.微妙的,不明显的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('superior','adj.优等的,更高级的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('suppress','v.镇压,阻止,抑制','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('tortoise','n.龟,迟缓的人','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('triumph','n.成功,成就','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('universal','adj.普遍的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('utter','v.表达,adj.完全的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('vehicle','n.车辆,工具,手段,媒介','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('vindicate','v.证实,证明...无罪','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('acclaim','v.称赞,n.称誉,高度评价','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('accommodate','v.使适应,调解,提供所需,容纳','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('accumulate','v.积累','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('adjust','v.适应,习惯,调整','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('adolescent','n.青少年,adj.青春期的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('advent','n.到来,出现','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('alloy','v.混合,n.混合物,合金','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('alumina','n.氧化铝','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('ambiguous','adj.有歧义的,模棱两可的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('ambivalent','adj.犹豫不决的,矛盾的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('amendment','n.修正,修正案','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('analytical','adj.分析的,解析的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('anomalous','adj.异常的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('anthology','n.选集','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('anticipate','v.预料,加速,使提前发生','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('antithesis','n.对立面','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('appropriate','v.私自挪用,盗用,adj.适合的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('archipelago','n.群岛,列岛','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('archive','n.档案馆,v.把...存档','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('aria','n.咏叹调','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('avant-garde','n.先锋派','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('badger','v.纠缠,烦扰,n.獾','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('betray','v.背叛,流露,展现','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('bias','n.倾向,偏爱,偏见','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('brood','v.沉思,孵蛋,n.同窝幼鸟','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('canon','n.标准,准则,正典,真作','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('champion','v.捍卫,拥护,支持,n.捍卫者','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('circumscribe','v.限制','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('clutch','n.一窝蛋,一窝小年,离合器','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('collapse','v.坍塌,崩溃','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('confound','v.使困惑,证明有误','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('confront','v.面对,对抗','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('considerable','adj.重大的,相当多的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('contemporary','adj.当代的,现代的,同时代的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('controversial','adj.有争议的,引发争议的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('cosmic','adj.宇宙的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('countenance','n.面容,v.支持,赞同,容忍','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('decisive','adj.坚决的,果断的,决定性的,关键的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('designate','v.指派,任命,命名','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('despair','n.绝望 v.绝望','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dialect','n.方言','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dilemma','n.窘境,困境','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('disdain','v.鄙视 n.鄙视','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dismiss','v.解雇,驱逐,不考虑','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('disposition','n.倾向,性情,部署,排列','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dissent','v.反对,不同意 n.不同意见,异议','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('dwarf','v.矮化,使相形见绌 adj.矮小的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('earthly','adj.地球的,土地的,尘世的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('elaborate','adj.精心策划的 v.精心制作,详尽阐述','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('elusive','adj.难抓住的,难理解的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('embrace','v.拥抱,包含,包括,欣然接受','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('employ','v.雇用,使用,采用','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('encompass','v.包含,包括,包围,围绕','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('enrich','v.充实,丰富,使富裕','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('enterprise','n.企业,公司,开拓精神,困难的项目','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('exalt','v.提拔,提升,高度赞扬','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('exclusive','adj.独有的,占有的,排外的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('expertise','n.专门知识,专门技能','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('exploit','v.开发,利用,剥削 n.英勇行为','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('fierce','adj.凶狠的,激烈的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('flair','n.天赋,才华','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('fluid','adj.流动的,流畅的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('foliage','n.叶子','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('forbear','v.忍住,克制','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('forbidding','adj.令人生畏的,冷峻的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('forge','v.锻造,伪造','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('forgo','v.放弃,抛弃','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('founder','n.创始人 v.失败','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('gaze','v.凝视 n.凝视,注视','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('graze','v.吃草','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('grid','n.网格','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('grip','n.紧握,控制 v.紧握,吸引','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('halt','v.停止,中止','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('hamper','v.阻止,妨碍','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('heir','n.继承人','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('immune','adj.免疫的','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('import','n.重要性,进口,输入的产品 v.进口','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('induce','v.引起,劝说,诱导','2019-06-04');
+INSERT INTO yaoniming3000 VALUES('inimitable','adj.无法效仿的','2019-06-04');
+COMMIT;
