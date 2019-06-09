@@ -1,5 +1,3 @@
-PRAGMA foreign_keys=OFF;
-BEGIN TRANSACTION;
 CREATE TABLE yaoniming3000 (
 	word text,
 	meaning text,
@@ -185,7 +183,7 @@ INSERT INTO yaoniming3000 VALUES('tendentious','adj.有偏见的,有倾向性的
 INSERT INTO yaoniming3000 VALUES('terrestrial','adj.地球的,陆地的','2019-06-05');
 INSERT INTO yaoniming3000 VALUES('testimony','n.证词,证言','2019-06-05');
 INSERT INTO yaoniming3000 VALUES('thrill','v.使激动,使兴奋 n.刺激,激动','2019-06-05');
-INSERT INTO yaoniming3000 VALUES('thil','v.倾斜 n.倾斜','2019-06-05');
+INSERT INTO yaoniming3000 VALUES('tilt','v.倾斜 n.倾斜','2019-06-05');
 INSERT INTO yaoniming3000 VALUES('torpor','n.懒散,迟钝','2019-06-05');
 INSERT INTO yaoniming3000 VALUES('tortuous','adj.弯曲的,曲折的','2019-06-05');
 INSERT INTO yaoniming3000 VALUES('trace','n.微量,踪迹 v.跟踪,追踪','2019-06-05');
@@ -348,6 +346,7 @@ INSERT INTO yaoniming3000 VALUES('chagrin','n.焦虑,悲痛','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('chorus','n.合唱队,合唱','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('Christianity','n.基督教','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('chronicle','n.编年史 v.按时间顺序记述','2019-06-07');
+INSERT INTO yaoniming3000 VALUES('chronological','adj.按时间顺序的','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('circumstantial','adj.依照情况的,间接的,佐证的','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('cleave','v.坚持,粘住,劈开','2019-06-07');
 INSERT INTO yaoniming3000 VALUES('cling','v.坚持','2019-06-07');
@@ -621,10 +620,33 @@ INSERT INTO yaoniming3000 VALUES('indolent','adj.懒惰的','2019-06-08');
 INSERT INTO yaoniming3000 VALUES('inflame','v.点燃,激起,加剧,恶化','2019-06-08');
 INSERT INTO yaoniming3000 VALUES('ingenuous','adj.真诚的,坦率的','2019-06-08');
 INSERT INTO yaoniming3000 VALUES('innocuous','adj.无害的,无意冒犯的','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('inquisitive','adj.好奇的,爱打听的','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('insulate','v.隔离,使绝缘','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('integrity','n.完整,正直','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('intermediary','adj.中间的,中介的 n.调解人,中介','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('intervene','v.介入,调解','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('intimate','v.暗示 adj.亲密的,密切的','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('invigorate','v.鼓舞,使振奋','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('invoke','v.援引,引用,祈求,请求','2019-06-08');
+INSERT INTO yaoniming3000 VALUES('irritate','v.激怒,使恼怒','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('isotope','n.同位素','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('jarring','adj.刺耳的,震惊的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('jovial','adj.欢乐的,愉快的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('judicious','adj.明智的,有判断力的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('jumble','v.使混杂,使混乱 n.混杂','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('jungle','n.丛林,混乱','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('jurisdiction','n.司法权,管辖权','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('keen','adj.敏锐的,热切的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('landslide','n.压倒性优势的胜利,山崩','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('largesse','n.慷慨捐赠,捐款','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('larva','n.幼虫','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('latitude','n.纬度,自由权','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('liable','adj.易于...的,有义务的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('lighthearted','adj.轻松愉快的,无忧无虑的','2019-06-09');
+INSERT INTO yaoniming3000 VALUES('like-minded','adj.志趣相同的','2019-06-09');
 CREATE TABLE other (
 	word	   		   TEXT,
 	meaning	           TEXT,
 	date_when_inserted DATE,
 	PRIMARY KEY (word)
 );
-COMMIT;
