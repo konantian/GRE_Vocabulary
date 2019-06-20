@@ -27,13 +27,17 @@ def welcome():
 	global connection,cursor
 
 	word = input("Enter the word: ")
-	meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.").replace("adj","adj.").replace(",v"," v").replace(",adj"," adj").replace(",n"," n")
+	meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.") \
+	.replace("adj","adj.").replace(",v"," v").replace(",adj"," adj") \
+	.replace(",n"," n").replace("adv","adv.").replace("prep","prep.")
 	while word.lower() != 'stop':
 		insertWord(word,meaning)
 		word = input("Enter the word: ")
 		if word.lower() == "stop":
 			break
-		meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.").replace("adj","adj.").replace(",v"," v").replace(",adj"," adj").replace(",n"," n")
+		meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.") \
+		.replace("adj","adj.").replace(",v"," v").replace(",adj"," adj") \
+		.replace(",n"," n").replace("adv","adv.").replace("prep","prep.")
 
 def insertWord(word,meaning):
 
