@@ -22,22 +22,28 @@ def connect(path):
 
 	connection.commit()
 
+def meaning_format(meaning):
+
+	meaning = meaning.strip()
+	meaning = meaning.replace(" ",",").replace("n","n.").replace("v","v.") \
+	.replace("adj","adj.").replace(",v"," v").replace(",adj"," adj") \
+	.replace(",n"," n").replace("adv","adv.").replace("prep","prep.")
+
+	return meaning
+
 def welcome():
 
 	global connection,cursor
 
 	word = input("Enter the word: ")
-	meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.") \
-	.replace("adj","adj.").replace(",v"," v").replace(",adj"," adj") \
-	.replace(",n"," n").replace("adv","adv.").replace("prep","prep.")
+	meaning = meaning_format(input("Enter the meaning: "))
+	
 	while word.lower() != 'stop':
 		insertWord(word,meaning)
 		word = input("Enter the word: ")
 		if word.lower() == "stop":
 			break
-		meaning = input("Enter the meaning: ").replace(" ",",").replace("n","n.").replace("v","v.") \
-		.replace("adj","adj.").replace(",v"," v").replace(",adj"," adj") \
-		.replace(",n"," n").replace("adv","adv.").replace("prep","prep.")
+		meaning = meaning_format(input("Enter the meaning: "))
 
 def insertWord(word,meaning):
 
