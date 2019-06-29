@@ -35,12 +35,12 @@ def welcome():
 
 	global connection,cursor
 
-	word = input("Enter the word: ")
+	word = input("Enter the word: ").strip()
 	meaning = meaning_format(input("Enter the meaning: "))
 	
 	while word.lower() != 'stop':
 		insertWord(word,meaning)
-		word = input("Enter the word: ")
+		word = input("Enter the word: ").strip()
 		if word.lower() == "stop":
 			break
 		meaning = meaning_format(input("Enter the meaning: "))
