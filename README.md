@@ -1,4 +1,4 @@
-# GRE_Vocabulary
+# GRE Vocabulary
 vacoabulary.db 包括再要你命3000的单词以及真题中出现的单词，持续更新中
 init.sql 包括所有单词的插入语句，可以直接预览
 
