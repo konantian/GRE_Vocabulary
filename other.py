@@ -34,7 +34,7 @@ def welcome():
 	meaning = meaning_format(input("Enter the meaning: "))
 	
 	while word.lower() != 'stop':
-		insertWord(word,meaning,"other")
+		insertWord(word,meaning,"practice")
 		word = input("Enter the word: ").strip()
 		if word.lower() == "stop":
 			break
