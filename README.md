@@ -8,7 +8,7 @@ init.sql 包括所有单词的插入语句，可以直接预览
 
 单词集1: https://quizlet.com/_6ulhd8
 
-单词集2: https://quizlet.com/_6ulnya
+单词集2: https://quizlet.com/_6v3986
 
 单词集3: https://quizlet.com/_6ulqv1
 
