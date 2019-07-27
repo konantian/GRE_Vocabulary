@@ -44,7 +44,7 @@ def insertWord(word,meaning,tag):
 
 	global connection,cursor
 
-	insert_word = "INSERT INTO GRE VALUES(:Word,:Meaning,:Tag,date('now','localtime'))"
+	insert_word = "INSERT INTO GRE VALUES(:Word,:Meaning,:Tag,date('now','localtime'),null)"
 
 	try:
 		cursor.execute(insert_word,{"Word":word,"Meaning":meaning,"Tag":tag})
